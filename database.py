@@ -18,7 +18,7 @@ class OHLCDatabase:
                 timestamp DATETIME NOT NULL,
                 symbol TEXT NOT NULL,
                 open REAL NOT NULL,
-                high REAL REAL NOT NULL,
+                high REAL NOT NULL,
                 low REAL NOT NULL,
                 close REAL NOT NULL,
                 volume INTEGER,
