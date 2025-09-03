@@ -363,7 +363,7 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Could not load data from database: {e}. Loading from CSV for testing.")
         # Fallback for testing if database is not populated or accessible
-        data = pd.read_csv("../upload/XAUUSD_M1_Backtest.csv", sep=\t, header=0)
+        data = pd.read_csv("../upload/XAUUSD_M1_Backtest.csv", sep='\t', header=0)
         data.columns = [col.replace("<", "").replace(">", "") for col in data.columns]
         data["timestamp"] = pd.to_datetime(data["DATE"] + " " + data["TIME"])
         data = data.set_index("timestamp")
