@@ -1,0 +1,146 @@
+{
+  "validation_summary": {
+    "total_tests": 8,
+    "passed_tests": 2,
+    "failed_tests": 6,
+    "error_tests": 0,
+    "success_rate": 0.25,
+    "total_execution_time": 96.432963
+  },
+  "test_results": {
+    "async_buffer_validation": {
+      "status": "FAILED",
+      "execution_time": 10.002332925796509,
+      "details": {}
+    },
+    "circular_buffer_validation": {
+      "status": "PASSED",
+      "execution_time": 0.008158683776855469,
+      "details": {}
+    },
+    "priority_queue_validation": {
+      "status": "PASSED",
+      "execution_time": 10.393224000930786,
+      "details": {}
+    },
+    "performance_stress_test": {
+      "status": "FAILED",
+      "execution_time": 40.00431776046753,
+      "details": {}
+    },
+    "memory_leak_test": {
+      "status": "FAILED",
+      "execution_time": 6.019365310668945,
+      "details": {}
+    },
+    "concurrent_access_test": {
+      "status": "FAILED",
+      "execution_time": 10.001817226409912,
+      "details": {}
+    },
+    "error_handling_test": {
+      "status": "FAILED",
+      "execution_time": 10.001339673995972,
+      "details": {}
+    },
+    "data_integrity_test": {
+      "status": "FAILED",
+      "execution_time": 10.001412153244019,
+      "details": {}
+    }
+  },
+  "performance_metrics": {
+    "stress_test": {
+      "tick_count": 13539,
+      "error_count": 0,
+      "actual_tps": 451.1044244474818,
+      "error_rate": 0.0,
+      "memory_increase_mb": 3.83984375,
+      "peak_memory_mb": 76.64453125,
+      "peak_cpu_percent": 0,
+      "buffer_stats": {
+        "buffer_performance": {
+          "start_time": "2025-08-27 21:47:54.899940",
+          "ticks_processed": 13539,
+          "ohlc_processed": 0,
+          "avg_processing_time": 4.2223687887442864e-06,
+          "peak_memory_usage": 76.8359375,
+          "errors": 0
+        },
+        "tick_buffer_stats": {
+          "total_items": 13539,
+          "overflows": 0,
+          "last_update": "2025-08-27 21:48:24.899902",
+          "current_size": 13539,
+          "max_size": 50000,
+          "utilization": 27.078000000000003
+        },
+        "ohlc_buffer_stats": {
+          "total_items": 0,
+          "overflows": 0,
+          "last_update": null,
+          "current_size": 0,
+          "max_size": 10000,
+          "utilization": 0.0
+        },
+        "queue_stats": {
+          "critical": {
+            "enqueued": 0,
+            "dequeued": 0,
+            "dropped": 0,
+            "current_size": 0,
+            "max_size": 1250
+          },
+          "high": {
+            "enqueued": 13539,
+            "dequeued": 13539,
+            "dropped": 0,
+            "current_size": 0,
+            "max_size": 1250
+          },
+          "normal": {
+            "enqueued": 0,
+            "dequeued": 0,
+            "dropped": 0,
+            "current_size": 0,
+            "max_size": 2500
+          },
+          "low": {
+            "enqueued": 0,
+            "dequeued": 0,
+            "dropped": 0,
+            "current_size": 0,
+            "max_size": 1250
+          }
+        },
+        "worker_threads": {
+          "tick_processor": true,
+          "ohlc_processor": true,
+          "monitor": true
+        }
+      }
+    }
+  },
+  "passed_tests": [
+    "circular_buffer_validation",
+    "priority_queue_validation"
+  ],
+  "failed_tests": [
+    "async_buffer_validation",
+    "performance_stress_test",
+    "memory_leak_test",
+    "concurrent_access_test",
+    "error_handling_test",
+    "data_integrity_test"
+  ],
+  "error_tests": [],
+  "error_log": [],
+  "recommendations": [
+    "Overall success rate is below 90%. Review failed tests and address issues before production deployment.",
+    "Memory leak test failed. Review object lifecycle management and ensure proper cleanup of resources.",
+    "Concurrent access test failed. Review thread safety mechanisms and consider using more robust locking strategies.",
+    "Performance stress test failed. Consider optimizing algorithms, increasing buffer sizes, or adding more worker threads.",
+    "Implement comprehensive monitoring and alerting in production environment.",
+    "Regularly run these validation tests in staging environment before updates."
+  ]
+}
